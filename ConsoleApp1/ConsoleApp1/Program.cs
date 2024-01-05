@@ -1,6 +1,8 @@
 ﻿using ConsoleApp1.tabuleiro;
+using Xadrez;
+using Xadrez.tabuleiro;
 
 
-Posicao P;
+Tabuleiro tab = new Tabuleiro();
 
-P = new Posicao(1, 2);  
+Tela.imprimirTabuleiro(tab);

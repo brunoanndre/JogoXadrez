@@ -10,13 +10,18 @@ namespace Xadrez.tabuleiro
     {
         public int linhas;
         public int colunas;
-        public Peca[,] pecas;
+        private Peca[,] pecas;
 
         public Tabuleiro()
         {
             this.linhas = 8;
             this.colunas = 8;
             pecas = new Peca[ linhas, colunas ];
+        }
+
+        public Peca peca( int linha, int coluna)
+        {
+            return pecas[linha, coluna];
         }
     }
 }
