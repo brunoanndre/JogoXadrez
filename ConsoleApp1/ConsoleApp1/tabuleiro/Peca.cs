@@ -14,11 +14,11 @@ namespace Xadrez.tabuleiro
         public int qtdMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, Tabuleiro tab, Cor cor)
+        public Peca(Tabuleiro tab, Cor cor)
         {
             this.cor = cor;
             this.tab = tab;
-            this.posicao = posicao;
+            this.posicao = null;
             this.qtdMovimentos = 0;
         }
     }

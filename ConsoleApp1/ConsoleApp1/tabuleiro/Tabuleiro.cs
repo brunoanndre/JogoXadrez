@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.tabuleiro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,12 @@ namespace Xadrez.tabuleiro
         public Peca peca( int linha, int coluna)
         {
             return pecas[linha, coluna];
+        }
+
+        public void colocarPeca(Peca p ,Posicao pos)
+        {
+            pecas[pos.linha, pos.coluna] = p;
+            p.posicao = pos;
         }
     }
 }
