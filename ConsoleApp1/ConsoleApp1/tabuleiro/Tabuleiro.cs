@@ -52,8 +52,10 @@
 
         public bool posicaoValida(Posicao pos)
         {
-            if(pos.linha < 0 || pos.linha >= 8 || pos.coluna < 0 || pos.coluna >= 8) {
-            return false;}
+            if(pos.linha < 0 || pos.linha >= 8 || pos.coluna < 0 || pos.coluna >= 8) 
+            {
+                return false;
+            }
             return true;
         }
 
