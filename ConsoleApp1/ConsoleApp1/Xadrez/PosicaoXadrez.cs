@@ -1,6 +1,6 @@
-﻿using ConsoleApp1.tabuleiro;
+﻿using tabuleiro;
 
-namespace Xadrez.Xadrez
+namespace Xadrez
 {
     internal class PosicaoXadrez
     {

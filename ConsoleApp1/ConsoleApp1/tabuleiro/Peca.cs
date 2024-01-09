@@ -1,11 +1,4 @@
-﻿using ConsoleApp1.tabuleiro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Xadrez.tabuleiro
+﻿namespace tabuleiro
 {
     internal class Peca
     {
@@ -20,6 +13,11 @@ namespace Xadrez.tabuleiro
             this.tab = tab;
             this.posicao = null;
             this.qtdMovimentos = 0;
+        }
+
+        public void IncrementarQtdMovimentos()
+        {
+            qtdMovimentos++;
         }
     }
 }

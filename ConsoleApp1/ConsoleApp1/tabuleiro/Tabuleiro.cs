@@ -1,11 +1,4 @@
-﻿using ConsoleApp1.tabuleiro;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Xadrez.tabuleiro
+﻿namespace tabuleiro
 {
     internal class Tabuleiro
     {
@@ -35,6 +28,17 @@ namespace Xadrez.tabuleiro
             p.posicao = pos;
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux; 
+        }
         public Peca peca(Posicao pos)
         {
             return pecas[pos.linha,pos.coluna];
