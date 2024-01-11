@@ -34,7 +34,7 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.linha -= 1;
+                pos.definirValores(pos.linha - 1, pos.coluna);
             }
 
             //NE
@@ -46,11 +46,11 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
             }
 
             //EAST
-            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
@@ -58,7 +58,7 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.coluna += 1;
+                pos.definirValores(pos.linha, pos.coluna + 1);
             }
 
             //SE
@@ -70,7 +70,7 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
+                pos.definirValores(pos.linha + 1, pos.coluna + 1);
             }
 
             //S
@@ -82,7 +82,7 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.linha += 1;
+                pos.definirValores(pos.linha + 1, pos.coluna);
             }
 
             //SW
@@ -94,10 +94,10 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
+                pos.definirValores(pos.linha + 1, pos.coluna - 1);
             }
 
-            //E
+            //W
             pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -106,7 +106,7 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.coluna -= 1;
+                pos.definirValores(pos.linha, pos.coluna - 1);
             }
 
             //NW
@@ -118,7 +118,7 @@ namespace Xadrez.Xadrez
                 {
                     break;
                 }
-                pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
+                pos.definirValores(pos.linha - 1, pos.coluna - 1);
             }
             return mat;
         }

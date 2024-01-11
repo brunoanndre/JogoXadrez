@@ -5,9 +5,9 @@ try
 {
 
 
-    Tabuleiro tab = new Tabuleiro();
+    Tabuleiro tab = new();
 
-    PartidaXadrez partida = new PartidaXadrez();
+    PartidaXadrez partida = new();
 
     while (!partida.terminada)
     {
